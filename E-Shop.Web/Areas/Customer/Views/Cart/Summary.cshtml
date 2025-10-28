@@ -1,0 +1,248 @@
+﻿@model ShoppingCartVM
+@using Microsoft.Extensions.Options
+@inject IOptions<E_Shop.Utilities.StripeData> Stripe
+<link href="~/css/summary.css" rel="stylesheet" />
+<form method="post" asp-action="PostSummary" asp-controller="Cart" asp-area="Customer">
+<div class="container">
+
+
+        <div class="row">
+        <div class="col-xl-8" >
+          
+
+            <div class="card">
+                <div class="card-body">
+                    <ol class="activity-checkout mb-0 px-4 mt-3">
+                        <li class="checkout-item">
+                            <div class="avatar checkout-icon p-1">
+                                <div class="avatar-title rounded-circle bg-primary">
+                                    <i class="bx bxs-receipt text-white font-size-20"></i>
+                                </div>
+                            </div>
+                            <div class="feed-item-list">
+                                <div>
+                                    <h5 class="font-size-16 mb-1">Billing Info</h5>
+                                    <p class="text-muted text-truncate mb-4">Sed ut perspiciatis unde omnis iste</p>
+                                    <div class="mb-3">
+                                        
+                                            <div>
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-name">Name</label>
+                                                            <input asp-for="OrderHeader.Name"  class="form-control" placeholder="Enter name" value="@Model.OrderHeader.Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-email-address">Email Address</label>
+                                                            <input asp-for="Email" type="email" class="form-control"  placeholder="Enter email" value="@Model.Email">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+
+                                        
+
+                                                <div class="row">
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-phone">Phone</label>
+                                                            <input required asp-for="OrderHeader.PhoneNumber" class="form-control" asp-for="OrderHeader.PhoneNumber" placeholder="Enter Phone no.">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-6">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">City</label>
+                                                            <input required asp-for="OrderHeader.City" class="form-control" placeholder="Enter City" value="@Model.OrderHeader.City">
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label" for="billing-address">Address</label>
+                                                    <input asp-for="OrderHeader.Address" class="form-control" placeholder="Enter full address" value="@Model.OrderHeader.Address">
+
+                                                </div>
+                                            </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        
+                        <li class="checkout-item">
+                            <div class="avatar checkout-icon p-1">
+                                <div class="avatar-title rounded-circle bg-primary">
+                                    <i class="bx bxs-wallet-alt text-white font-size-20"></i>
+                                </div>
+                            </div>
+                            <div class="feed-item-list">
+                                <div>
+                                    <h5 class="font-size-16 mb-1">Payment Info</h5>
+                                    <p class="text-muted text-truncate mb-4">Duis arcu tortor, suscipit eget</p>
+                                </div>
+                                <div>
+                                    <h5 class="font-size-14 mb-3">Payment method :</h5>
+                                    <div class="row">
+                                        
+
+                                        
+
+                                        <div class="col-lg-6  col-sm-6">
+                                            <div>
+                                                <label class="card-radio-label">
+                                                    <input type="radio" name="pay-method" id="pay-methodoption3" class="card-radio-input" checked="">
+
+                                                    <span class="card-radio py-3 text-center text-truncate" >
+                                                        <i class="bx bx-money d-block h2 mb-3"></i>
+                                                            <span>Paypal</span>
+                                                    </span>
+                                                </label>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div>
+          
+
+            
+        </div>
+        <div class="col-xl-4">
+            <div class="card checkout-order-summary">
+                <div class="card-body">
+                    <div class="p-3 bg-light mb-3">
+                        <h5 class="font-size-16 mb-0">Order Summary <span class="float-end ms-2">#MN0124</span></h5>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-centered mb-0 table-nowrap">
+                            <thead>
+                                <tr>
+                                    <th class="border-top-0" style="width: 110px;" scope="col">Product</th>
+                                    <th class="border-top-0" scope="col">Product Desc</th>
+                                    <th class="border-top-0" scope="col">Price</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (var item in Model.CartList)
+                                {
+                                    
+                                    <tr>
+                                        <th scope="row"><img src="~/@item.Product.Img" alt="product-img" title="product-img" class="avatar-lg rounded"></th>
+                                        <td>
+                                            <h5 class="font-size-16 text-truncate"><a href="#" class="text-dark">@item.Product.Name </a></h5>
+                                            <p class="text-muted mb-0">
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star text-warning"></i>
+                                                <i class="bx bxs-star-half text-warning"></i>
+                                            </p>
+                                            <p class="text-muted mb-0 mt-1">$ @item.Product.Price x @item.Count</p>
+                                        </td>
+                                        <td>$@(item.Product.Price * item.Count) </td>
+                                    </tr>
+                                }
+                               
+                             
+
+
+
+
+
+
+
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Sub Total :</h5>
+                                    </td>
+                                    <td>
+                                        $ @Model.OrderHeader.TotalPrice
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Discount :</h5>
+                                    </td>
+                                    <td>
+                                        - $ 78
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Shipping Charge :</h5>
+                                    </td>
+                                    <td>
+                                        $ 25
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Estimated Tax :</h5>
+                                    </td>
+                                    <td>
+                                        $ 18.20
+                                    </td>
+                                </tr>
+
+                                <tr class="bg-light">
+                                    <td colspan="2">
+                                        <h5 class="font-size-14 m-0">Total:</h5>
+                                    </td>
+                                    <td>
+                                        $ @Model.OrderHeader.TotalPrice
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+                        @if (Model.CartList.Count() > 0)
+                        {
+                            <div class="row my-4">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary w-50">Procced </button>
+
+                                </div>
+                                <div class="col">
+                                    <a href="ecommerce-products.html" class="btn btn-link text-muted  border-info w-30">
+                                        <i class="mdi mdi-arrow-left me-1"></i> Continue Shopping
+                                    </a>
+                                </div> <!-- end col -->
+
+
+                                
+
+
+                                <!-- end col -->
+                            </div>
+                        }
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+      
+
+        <!-- end row-->
+    </div>
+</form>
+    <!-- end row -->
+

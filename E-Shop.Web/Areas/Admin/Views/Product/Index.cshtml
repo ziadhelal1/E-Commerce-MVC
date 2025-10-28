@@ -1,0 +1,120 @@
+﻿@model IEnumerable<Product>
+@{
+    ViewBag.PageTitle = "Product Mangement";
+    ViewBag.CardTitle = "Browse Product ";
+    
+    //Layout = "~/Views/Shared/_Dashboard.cshtml";
+
+}
+@*<partial name="_toaster"/>*@
+<div>
+    @* <a href="/Admin/Product/create" class="btn btn-primary"> Create</a> *@
+    <a asp-action="Create" class="btn btn-primary"> Create</a>
+
+</div>
+
+
+<br />
+<table id='tblList' class="table">
+    <thead>
+        <tr>
+            <th scope="col">Image</th>
+            <th scope="col">Name</th>
+            <th scope="col">Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Category</th>
+            <th scope="col">Category Description</th>
+            <th scope="col">Actions</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (Product item in Model)
+        {
+            <tr>
+                <td>
+                    @if (item.Img != null)
+                    {
+                        <img src="~/@item.Img" alt="no Image" width="170" height="170" />
+                    }
+                </td>
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Description)</td>
+                <td>@Html.DisplayFor(modelItem => item.Price)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.Category.Description)</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success"> <i class="bi bi-check-circle">Edit</i></a>
+                    @*<a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"> <i class="bi bi-info-circle">Details</i></a>*@
+                    <a onclick="return DeleteItem('/admin/product/DeleteProduct/@item.Id')" onchange="location.reload();" class="btn btn-danger">
+                        <i class="bi bi-exclamation-octagon">Delete</i>
+                        
+                    </a>
+
+                    
+                </td>
+            </tr>
+
+
+        }
+    </tbody>
+
+
+</table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script>
+ 
+    function DeleteItem(url) {
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+                $.ajax({
+                    url: url,
+                    type: "Delete",
+                    success: function (data) {
+                        
+                        if (data.success) {
+                            location.reload();
+
+                            
+                            toaster.success(data.message);
+                            
+
+                        }
+                        else {
+                            toaster.error(data.message);
+                        }
+                        
+                    }
+
+    
+                });
+                
+                
+            }
+        });
+    }
+    
+</script>
+
+<link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
+<script type="text/javascript" src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+<script type="text/javascript">
+    var js = jQuery.noConflict(true)
+    js(document).ready(function () {
+        js('#tblList').DataTable({
+
+        });
+    })
+</script>
+

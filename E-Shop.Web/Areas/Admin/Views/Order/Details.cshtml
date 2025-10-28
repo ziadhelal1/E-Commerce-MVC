@@ -1,0 +1,243 @@
+﻿@using E_Shop.Utilities
+
+
+@model OrderVM
+@{
+    ViewBag.PageTitle = "Orders Mangement";
+    ViewBag.CardTitle = "View User Details ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+
+}
+
+<link href="~/css/summary.css" rel="stylesheet" />
+<form method="post" asp-action="StrartShipping">
+<div class="container">
+
+
+        <div class="row">
+        <div class="col-xl-8" >
+          
+
+            <div class="card">
+                <div class="card-body">
+                    <ol class="activity-checkout mb-0 px-4 mt-3">
+                        <li class="checkout-item">
+                            
+                            <div class="feed-item-list">
+                                <div>
+                                    <h5 class="font-size-16 mb-1">Pickup Details</h5>
+                                        <p class="text-muted text-truncate mb-4">Review your order history to track recent purchases and returns</p>
+                                    <div class="mb-3">
+                                        
+                                            <div>
+                                                <input  hidden asp-for="OrderHeader.Id"/>
+                                                <div class="row">
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" >Name</label>
+                                                            <input asp-for="OrderHeader.Name"   class="form-control" placeholder="Enter name" value="@Model.OrderHeader.Name">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-email-address">Email Address</label>
+                                                            <input asp-for="@Model.OrderHeader.ApplicationUser.Email" disabled readonly type="email" class="form-control" placeholder="Enter email" value="@Model.OrderHeader.ApplicationUser.Email">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-phone">Phone</label>
+                                                            <input asp-for="OrderHeader.PhoneNumber" class="form-control" asp-for="OrderHeader.PhoneNumber" placeholder="Enter Phone no.">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">City</label>
+                                                            <input asp-for="OrderHeader.City" class="form-control" placeholder="Enter City" value="@Model.OrderHeader.City">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-address">Address</label>
+                                                            <input asp-for="OrderHeader.Address" class="form-control" placeholder="Enter full address" value="@Model.OrderHeader.Address">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-address">Payment Status</label>
+                                                            <input asp-for="@Model.OrderHeader.PaymentStatus" type="text" class="form-control" />
+
+                                                        </div>
+                                                    </div>
+                                                   
+                                                    
+                                                    
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">Order Date</label>
+                                                            <input disabled readonly asp-for="@Model.OrderHeader.OrderDate" type="date" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">Payment Date</label>
+                                                            <input disabled readonly asp-for="@Model.OrderHeader.PaymentDate" type="date" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-phone">Shipping Date</label>
+                                                            <input asp-for="@Model.OrderHeader.ShippingDate" type="date" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-3">
+                                                            <label class="form-label" for="billing-phone">Carrier</label>
+                                                            <input  asp-for="@Model.OrderHeader.Carrier" id="carrier" type="text" class="form-control" />
+                                                        </div>
+                                                    </div>
+
+
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">Tracking Number</label>
+                                                            <input  asp-for="@Model.OrderHeader.TrackingNumber" id="tracking"type="text" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                 
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">Session Id</label>
+                                                            <input asp-for="@Model.OrderHeader.SessionId" type="text" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12">
+                                                        <div class="mb-4 mb-lg-0">
+                                                            <label class="form-label" for="billing-city">Payment Intent Id</label>
+                                                            <input asp-for="@Model.OrderHeader.PaymentIntentId" type="text" class="form-control" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ol>
+                </div>
+            </div >
+        </div>
+        <div class="col-xl-4">
+            
+            <div class="card checkout-order-summary">
+                <div class="card-body">
+                    <div class="p-3 bg-light mb-3">
+                         
+
+                             <h5 class="font-size-16 btn btn-outline-info my-2 " style="width:100%">Order Status :  <span class="float-end ms-2">@Model.OrderHeader.OrederStatus</span></h5> 
+                    </div>
+                    <div class="table-responsive">
+                        <table class="table table-centered mb-0 table-nowrap">
+                            
+                            <tbody>
+                                @foreach (var item in Model.OrderDetails)
+                                {
+                                        <tr class="list-group d-flex justify-contebt-between">
+                                            <div class="row container">
+                                                <div class="col-8">
+                                                    <h6 class="my-0 text-primary">@item.Product.Name</h6>
+                                                    <small class="text-muted">Price: @item.Product.Price </small><br />
+                                                    <small class="text-muted">Quantity: @item.Count</small>
+
+                                                </div>
+                                                <div class="col-4 text-end">
+                                                    <p class="text-success">@((item.Product.Price * item.Count).ToString("c"))</p>
+                                                </div>
+                                            </div>
+                                        </tr>
+
+                                }
+                               
+                                <tr class="bg-dark">
+                                    <td colspan="2">
+                                            <h5 class="font-size-12 m-0 text-white" style="font-size:x-large">Total:</h5>
+                                    </td>
+                                        <td text-white style="font-size:x-large">
+                                        $@Model.OrderHeader.TotalPrice
+                                        </td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+        <div class="row my-4">
+          
+            <div class="col" style="width:100% ">
+                @if (Model.OrderHeader.OrederStatus==SD.Approve)
+                {
+                            <button type="submit" class="btn btn-primary" asp-action="StrartProcessing" asp-route-id="@Model.OrderHeader.Id"> Proccessing  </button>
+                 }
+                @if (Model.OrderHeader.OrederStatus == SD.Procecssing)
+                {
+                            <button onclick="CheckData(event)" type="submit" class="btn btn-success"> Shipping </button>
+                }
+                @if (Model.OrderHeader.OrederStatus != SD.Pending && Model.OrderHeader.OrederStatus != SD.Canceled)
+                {
+                            <button asp-action="CanelOrder" asp-route-id="@Model.OrderHeader.Id" type="submit" class="btn btn-danger">Cancel Order  </button>
+                }
+            </div> 
+        </div> 
+        </div>
+    </div>
+    </div>
+    @* <input type="submit" asp-action="UpdateOrderDetails" value="Update And Pickup" class="btn btn-primary align-content-center my-1" style="width:65%" /> *@
+</form>
+    @section Scripts{
+
+        <script> 
+        function CheckData(event) {
+            if (document.getElementById("carrier").value == '') {
+                event.preventDefault();
+                Swal.fire({
+                    title: "There Is An Error",
+                    text: "Please Enter Carrier",
+                    icon: "error",
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                    
+
+                });
+                return false;
+
+            }
+            if (document.getElementById("tracking").value == '') {
+                event.preventDefault();
+
+                Swal.fire({
+                    title: "There Is An Error",
+                    text: "Please Enter Tracking Number",
+                    icon: "error",
+                    confirmButtonColor: "#3085d6",
+                    cancelButtonColor: "#d33",
+                });
+                return false;
+            }
+            return true;
+        }
+        </script>
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+

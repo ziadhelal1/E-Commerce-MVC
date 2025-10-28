@@ -1,0 +1,149 @@
+﻿@model ShoppingCartVM
+<header>
+    <!-- Jumbotron -->
+    <div class="p-3 text-center bg-white border-bottom">
+        
+        </div>
+    </div>
+    <!-- Jumbotron -->
+    <!-- Heading -->
+    @* <link href="~/shoppingcart/style.css" rel="stylesheet" /> *@
+</header>
+<form method="get" asp-action="summary">
+
+<!-- cart + summary -->
+<section class="bg-light my-5">
+    <div class="container">
+        <div class="row">
+            <!-- cart -->
+            <div class="col-lg-9">
+                <div class="card border shadow-0">
+                    <div class="m-4">
+                        <h4 class="card-title mb-4">Your shopping cart</h4>
+                       @foreach (var item in Model.CartList)
+                        {
+                            <div class="row gy-3 mb-4">
+                                <div class="col-lg-5">
+                                    <div class="me-lg-5">
+                                        <div class="d-flex">
+                                            <img src="~/@item.Product.Img" class="border rounded me-3" style="width: 96px; height: 96px;" />
+                                            <div class="">
+                                                <a href="#" class="nav-link">@item.Product.Name</a>
+                                                <p class="text-muted">@item.Product.Description</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-2 col-sm-6 col-6 d-flex flex-row flex-lg-column flex-xl-row text-nowrap">
+
+                                        <div class="">
+
+                                            <div class="col-lg-5" style="margin-right:50px">
+                                                <div class="btn-group" role="group">
+                                                    <span style="margin:7px">@item.Count</span>
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    <div class="">
+
+                                        <div class="col-lg-5" style="margin-right:50px">
+                                            <div class="btn-group" role="group">
+                                                <a class="btn btn-dark" asp-action="Plus" asp-route-cartId="@item.Id" >+</a>
+                                                    &nbsp
+                                                    
+                                                    <a class="btn btn-dark" asp-action="Minus" asp-route-cartId="@item.Id">-</a>
+
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+
+                                    <div class="">
+                                        <text class="h6">$@(item.Count*item.Product.Price)</text> <br />
+                                        <small class="text-muted text-nowrap"> $@item.Product.Price / per item </small>
+                                    </div>
+                                </div>
+                                <div class="col-lg col-sm-6 d-flex justify-content-sm-center justify-content-md-start justify-content-lg-center justify-content-xl-end mb-2">
+                                    <div  class="float-md-end" >
+
+                                            <a onclick="return confirm('Are U Sure')" asp-action="Remove" asp-route-cartId="@item.Id" class="btn btn-danger border-5 text-light  icon-hover-danger "><ion-icon name="trash-outline">Remove</ion-icon>  </a>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                        
+
+                       
+                    </div>
+
+                    <div class="border-top pt-4 mx-4 mb-4">
+                        <p><i class="fas fa-truck text-muted fa-lg"></i> Delivery within 1-2 weeks</p>
+                        <p class="text-muted">
+                                With our fast shipping service, you can be sure that your product will be in your hands within two weeks. We prioritize getting your order to you as quickly as possible
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- cart -->
+            <!-- summary -->
+            <div class="col-lg-3">
+                <div class="card mb-3 border shadow-0">
+                    <div class="card-body">
+                        
+                            <div class="form-group">
+                                <label class="form-label">Have coupon?</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control border" name="" placeholder="Coupon code" />
+                                    <button class="btn btn-light border">Apply</button>
+                                </div>
+                            </div>
+                        
+                    </div>
+                </div>
+                <div class="card shadow-0 border" >
+                    <div class="card-body">
+                        <div class="d-flex justify-content-between">
+                            <p class="mb-2">Cart Quantity:</p>
+                            <p class="mb-2">@Model.TotalQuantity Product</p>
+                        </div>
+                        
+                      
+                        <hr />
+                        <div class="d-flex justify-content-between" style="font-size:large">
+                            <p class="mb-2">Total price:</p>
+                            <p class="mb-2 fw-bold text-success">$@Model.TotalPrice</p>
+                        </div>
+                           
+
+                      
+                    </div>
+                </div>
+                    @if (Model.CartList.Count() > 0)
+                    {
+                        <div class="row my-4">
+                            <button type="submit" class=" btn btn-success w-50 "> Make Purchase</button>
+                            @* <a href="#" class="btn btn-success w-100 shadow-0 mb-2"> Make Purchase </a> *@
+                            <a asp-controller="home" asp-action="index" class="btn btn-light border-info w-50 "> Continue Shopping </a>
+                        </div>
+                    }
+                    else
+                    {
+                        <a class=" btn btn-warning w-100 shadow-sm mb-2" asp-controller="home" asp-action="index" class="btn btn-light w-100 border mt-2"> Back To Shop And Fill The Cart </a>
+                    }
+            </div>
+
+
+            <!-- summary -->
+        </div>
+          
+    </div>
+
+</section>
+<!-- cart + summary -->
+
+<!-- Recommended -->
+<!-- Footer -->
+
+</form>

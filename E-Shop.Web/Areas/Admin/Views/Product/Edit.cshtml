@@ -1,0 +1,74 @@
+﻿@model ProductVM
+@{
+    ViewBag.PageTitle = "Product Mangement";
+    ViewBag.CardTitle = "Edit Product";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+
+}
+
+
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <Div class="mb-3">
+                <input type="hidden" asp-for="@Model.product.Id" />
+
+                <input type="hidden" asp-for="@Model.product.Img" />
+                <label asp-for="product.Name"></label>
+                <input asp-for="product.Name" class="form-control " />
+                <span asp-validation-for="product.Name" class="text-danger"></span>
+            </Div>
+            <Div class="mb-3">
+                <label asp-for="product.Description"></label>
+                <textarea asp-for="product.Description" class="form-control "></textarea>
+                <span asp-validation-for="product.Description" class="text-danger"></span>
+            </Div>
+            <Div class="mb-3">
+                <label asp-for="product.Price"></label>
+                <input asp-for="product.Price" class="form-control " />
+                <span asp-validation-for="product.Price" class="text-danger"></span>
+            </Div>
+            <Div class="mb-3">
+                <label asp-for="product.Img"></label>
+                <input type="file" name="file" id="imagefile" class="form-control " onchange="fillImg(event)" />
+                @*<span asp-validation-for="Description" class="text-danger"></span>*@
+            </Div>
+            <Div class="mb-3">
+                <label asp-for="product.CategoryId"></label>
+                <select asp-for="product.CategoryId" asp-items="Model.CategoryList" class="form-control">
+                    <option disabled selected>-- Select Category --</option>
+                </select>
+
+                <span asp-validation-for="product.CategoryId" class="text-danger"></span>
+            </Div>
+            <Div class="mb-3">
+                <button type="submit" class="btn btn-success">Save </button>
+                <a asp-action="index" asp-controller="Product" class="btn btn-warning"> Back To List</a>
+
+            </Div>
+
+
+
+        </form>
+    </div>
+    <div class="col-md-4">
+        <div  class="container">
+            <img id="ImgPreview" src="~/@Model.product.Img" width="400" height="400" />
+            </div>
+    </div>
+</div>
+
+
+
+@section Scripts
+{
+    <Partial name="_ValidationScriptsPartial" />
+    <script>
+        var fillImg = function (event) {
+            var imgHolder = document.getElementById("ImgPreview");
+            imgHolder.src = URL.createObjectURL(event.target.files[0]);
+        }
+    </script>
+
+}

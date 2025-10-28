@@ -1,0 +1,214 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\zaid\\source\\repos\\E-Shop\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.dataaccess\\dbinitializer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|solutionrelative:e-shop.dataaccess\\dbinitializer\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.dataaccess\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|solutionrelative:e-shop.dataaccess\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|solutionrelative:e-shop.web\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.dataaccess\\implementation\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|solutionrelative:e-shop.dataaccess\\implementation\\unitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.web\\areas\\customer\\views\\cart\\summary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|solutionrelative:e-shop.web\\areas\\customer\\views\\cart\\summary.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BE978F5-02D8-4C7C-8E54-090AF108DEFE}|E-Shop.Entities\\E-Shop.Entities.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.entities\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BE978F5-02D8-4C7C-8E54-090AF108DEFE}|E-Shop.Entities\\E-Shop.Entities.csproj|solutionrelative:e-shop.entities\\repositories\\iunitofwork.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.dataaccess\\implementation\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{35A83908-1065-40B2-82B4-F09CCFF5FCD3}|E-Shop.DataAccess\\E-Shop.DataAccess.csproj|solutionrelative:e-shop.dataaccess\\implementation\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3BE978F5-02D8-4C7C-8E54-090AF108DEFE}|E-Shop.Entities\\E-Shop.Entities.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.entities\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3BE978F5-02D8-4C7C-8E54-090AF108DEFE}|E-Shop.Entities\\E-Shop.Entities.csproj|solutionrelative:e-shop.entities\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139F190B-92A1-42BE-868B-4FEF62B0BCB7}|E-Shop.Utilities\\E-Shop.Utilities.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.utilities\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139F190B-92A1-42BE-868B-4FEF62B0BCB7}|E-Shop.Utilities\\E-Shop.Utilities.csproj|solutionrelative:e-shop.utilities\\emailsender.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{139F190B-92A1-42BE-868B-4FEF62B0BCB7}|E-Shop.Utilities\\E-Shop.Utilities.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.utilities\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{139F190B-92A1-42BE-868B-4FEF62B0BCB7}|E-Shop.Utilities\\E-Shop.Utilities.csproj|solutionrelative:e-shop.utilities\\sd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|solutionrelative:e-shop.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|c:\\users\\zaid\\source\\repos\\e-shop\\e-shop.web\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{316BBD7D-E2D9-4AF7-A783-2D32C2D96117}|E-Shop.Web\\E-Shop.Web.csproj|solutionrelative:e-shop.web\\areas\\admin\\controllers\\ordercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 9,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "E-Shop.DataAccess\\Data\\ApplicationDbContext.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "E-Shop.DataAccess\\Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAgAAABEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-03T13:02:04.889Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Summary.cshtml",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\Areas\\Customer\\Views\\Cart\\Summary.cshtml",
+              "RelativeDocumentMoniker": "E-Shop.Web\\Areas\\Customer\\Views\\Cart\\Summary.cshtml",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\Areas\\Customer\\Views\\Cart\\Summary.cshtml",
+              "RelativeToolTip": "E-Shop.Web\\Areas\\Customer\\Views\\Cart\\Summary.cshtml",
+              "ViewState": "AQIAACsAAAAAAAAAAAArwDsAAAA6AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-03-03T13:00:08.571Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\Implementation\\UnitOfWork.cs",
+              "RelativeDocumentMoniker": "E-Shop.DataAccess\\Implementation\\UnitOfWork.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\Implementation\\UnitOfWork.cs",
+              "RelativeToolTip": "E-Shop.DataAccess\\Implementation\\UnitOfWork.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACQAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T10:45:47.04Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Entities\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "E-Shop.Entities\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Entities\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "E-Shop.Entities\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T10:45:10.368Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\Implementation\\GenericRepository.cs",
+              "RelativeDocumentMoniker": "E-Shop.DataAccess\\Implementation\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\Implementation\\GenericRepository.cs",
+              "RelativeToolTip": "E-Shop.DataAccess\\Implementation\\GenericRepository.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABAAAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T10:44:21.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmailSender.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Utilities\\EmailSender.cs",
+              "RelativeDocumentMoniker": "E-Shop.Utilities\\EmailSender.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Utilities\\EmailSender.cs",
+              "RelativeToolTip": "E-Shop.Utilities\\EmailSender.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T09:19:42.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "SD.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Utilities\\SD.cs",
+              "RelativeDocumentMoniker": "E-Shop.Utilities\\SD.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Utilities\\SD.cs",
+              "RelativeToolTip": "E-Shop.Utilities\\SD.cs",
+              "ViewState": "AQIAAAsAAAAAAAAAAAAAwAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T09:19:36.151Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\Program.cs",
+              "RelativeDocumentMoniker": "E-Shop.Web\\Program.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\Program.cs",
+              "RelativeToolTip": "E-Shop.Web\\Program.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAADAAAAALAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T08:17:21.111Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "OrderController.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeDocumentMoniker": "E-Shop.Web\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "RelativeToolTip": "E-Shop.Web\\Areas\\Admin\\Controllers\\OrderController.cs",
+              "ViewState": "AQIAACkAAAAAAAAAAAAgwF4AAAA8AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T20:12:57.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DbInitializer.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\DbInitializer\\DbInitializer.cs",
+              "RelativeDocumentMoniker": "E-Shop.DataAccess\\DbInitializer\\DbInitializer.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.DataAccess\\DbInitializer\\DbInitializer.cs",
+              "RelativeToolTip": "E-Shop.DataAccess\\DbInitializer\\DbInitializer.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAEkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-07-19T18:29:20.176Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUnitOfWork.cs",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Entities\\Repositories\\IUnitOfWork.cs",
+              "RelativeDocumentMoniker": "E-Shop.Entities\\Repositories\\IUnitOfWork.cs",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Entities\\Repositories\\IUnitOfWork.cs",
+              "RelativeToolTip": "E-Shop.Entities\\Repositories\\IUnitOfWork.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-15T11:40:40.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\appsettings.json",
+              "RelativeDocumentMoniker": "E-Shop.Web\\appsettings.json",
+              "ToolTip": "C:\\Users\\zaid\\source\\repos\\E-Shop\\E-Shop.Web\\appsettings.json",
+              "RelativeToolTip": "E-Shop.Web\\appsettings.json",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-07-19T18:24:19.944Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

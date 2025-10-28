@@ -1,0 +1,74 @@
+﻿@using E_Shop.Utilities
+@model IEnumerable<OrderHeader>
+@{
+    // ViewBag.PageTitle = "Order Mangement";
+    // ViewBag.CardTitle = "Browse Order ";
+    //Layout = "~/Views/Shared/_Dashboard.cshtml";
+
+}
+@*<partial name="_toaster"/>*@
+
+
+
+<br />
+<table id='tblList' class="table">
+    <thead>
+        <tr>
+            <th scope="col">Id</th>
+            <th scope="col">Name</th>
+            <th scope="col">PhoneNumber</th>
+            <th scope="col">Email</th>
+            <th scope="col">Order Status</th>
+            <th scope="col">Total</th>
+            <th scope="col">Actions</th>
+
+
+
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (OrderHeader item in Model)
+        {
+            <tr>
+
+                <td>@Html.DisplayFor(modelItem => item.Id)</td>
+
+                <td>@Html.DisplayFor(modelItem => item.Name)</td>
+                <td>@Html.DisplayFor(modelItem => item.PhoneNumber)</td>
+                <td>@Html.DisplayFor(modelItem => item.ApplicationUser.Email)</td>
+                <td>@Html.DisplayFor(modelItem => item.OrederStatus)</td>
+                <td>@Html.DisplayFor(modelItem => item.TotalPrice)</td>
+                <td>
+                    <a asp-action="Details" asp-route-id="@item.Id" class="btn btn-warning"> <i class="bi bi-check-circle">Details</i></a>
+                    @*<a asp-action="Details" asp-route-id="@item.Id" class="btn btn-info"> <i class="bi bi-info-circle">Details</i></a>*@
+
+                    @if (item.OrederStatus!=SD.Canceled)
+                    {
+                        <a asp-action="Delete" asp-route-id="@item.Id" onclick="return confirm('Are U Sure')" class="btn btn-danger">
+                            <i class="bi bi-exclamation-octagon">Cancel</i>
+                        </a>
+                    }
+                   
+                </td>
+            </tr>
+
+
+        }
+    </tbody>
+
+
+</table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
+<script type="text/javascript" src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+<script type="text/javascript">
+    var js = jQuery.noConflict(true)
+    js(document).ready(function () {
+        js('#tblList').DataTable({
+
+        });
+    })
+</script>
+

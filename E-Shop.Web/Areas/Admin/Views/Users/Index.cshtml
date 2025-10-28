@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ApplicationUser>
+@{
+    ViewBag.PageTitle = "Users Mangement";
+    ViewBag.CardTitle = "Browse Users ";
+    Layout = "~/Views/Shared/_Dashboard.cshtml";
+
+}
+@*<partial name="_toaster"/>*@
+<div>
+    <a href="/Identity/Account/Register" class="btn btn-primary"> Create New User</a>
+    @* <a asp-action="Create" class="btn btn-primary"> Create</a> *@
+</div>
+
+
+<br />
+<table id='tblList' class="table">
+    <thead>
+        <tr>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Phone Number</th>
+            <th>Actions</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+
+                <td>@item.Name</td>
+                <td>@item.Email</td>
+                <td>@item.PhoneNumber</td>
+                <td>
+                    @if (item.LockoutEnd == null|| item.LockoutEnd < DateTime.Now)
+                    {
+                        <a asp-action="LockUnlock" class="btn btn-success" asp-route-id="@item.Id">
+                            <i class="fas fa-lock-open"></i>
+                        </a>
+                    }
+                    else
+                    {
+                        <a asp-action="LockUnlock" class="btn btn-danger" asp-route-id="@item.Id">
+                        <i class="fas fa-lock"></i>
+                    </a>
+                    }
+
+                   
+
+                   
+                    @* <a href="/Admin/category/edit/@item.Id" class="btn btn-success">Edit </a> *@
+
+
+                    <a asp-action="Delete" asp-controller="users" asp-area="Admin" asp-route-id="@item.Id" onclick="return confirm('Are U Sure')" class="btn btn-danger">Delete </a>
+                </td>
+
+            </tr>
+        }
+    </tbody>
+</table>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+<link type="text/css" rel="stylesheet" href="https://cdn.datatables.net/2.0.5/css/dataTables.dataTables.css" />
+<script type="text/javascript" src="https://cdn.datatables.net/2.0.5/js/dataTables.js"></script>
+<script type="text/javascript">
+    var js = jQuery.noConflict(true)
+    js(document).ready(function () {
+        js('#tblList').DataTable({
+
+        });
+    })
+</script>
+
